@@ -1,17 +1,32 @@
 #include<iostream>
 using namespace std;
-int main(){
-   int i,n,sum;
-   sum=0;
-   cout<<"enter the value of n";
-   cin>>n;
-   for(i=0;i<=n;i++){
-    sum+=i;
-    cout<<sum<<endl;
+int fib(int n)
+{
+    int a,b,sum;
+    a=0;
+    b=1;
+    if(n==0)
+    return a;
+    
+    for(int i=2;i<=n;i++){
+      sum=a+b;
+      a=b;
+      b=sum;
+    }
+    return b;
+}
+
+    int main()
+    {
+
+        int c;
+        cout<<"enter the value of c ";
+        cin>>c;
+
+        cout<<fib(c);
+        return 0;
+    }
+    
 
     
-   }
 
-   
-    return 0;
-}
